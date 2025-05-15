@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Audio Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎵 Upload or Paste MP3 URL</h1>
+  <input type="file" id="audio-upload" accept=".mp3">
+  <input type="text" id="url-input" placeholder="Enter MP3 URL">
+  <button onclick="loadURL()">Load from URL</button>
+  <p id="warning" style="color:red;"></p>
+  
+  <canvas id="visualizer"></canvas>
+  <audio id="audio" controls></audio>
+  
+  <label>Volume: <input type="range" id="volume" min="0" max="2" step="0.01" value="1"></label><br>
+  <label>Bass Boost: <input type="range" id="bass" min="0" max="200" step="1" value="100"></label><br>
+  <label>Pitch (%): <input type="range" id="pitch" min="50" max="200" step="1" value="100"></label>
+
+  <script src="soundtouch.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
