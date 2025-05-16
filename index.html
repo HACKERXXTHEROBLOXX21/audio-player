@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MP3 Pitch + Waveform Player</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>MP3 Pitch + Waveform Player</h1>
+
+    <input type="file" id="audioFile" accept="audio/mp3"/>
+
+    <div class="controls">
+      <button id="play">Play</button>
+      <button id="pause">Pause</button>
+      <button id="stop">Stop</button>
+
+      <label>Pitch (0.5x – 2.0x):</label>
+      <input type="range" id="pitchSlider" min="0.5" max="2" step="0.01" value="1" />
+
+      <label>Waveform Style:</label>
+      <select id="waveformStyle">
+        <option value="bars">Bars</option>
+        <option value="line">Line</option>
+        <option value="circle">Circle</option>
+      </select>
+    </div>
+
+    <canvas id="visualizer" width="800" height="200"></canvas>
+  </div>
+
+  <script src="visualizer.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
